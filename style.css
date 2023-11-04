@@ -1,0 +1,129 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e4e4e4;
+}
+
+.todo-container {
+  width: 350px;
+  background: #FFF;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.todo-input-container {
+  display: flex;
+  margin-bottom: 10px; /* Reduced margin-bottom */
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+/* Existing styles... */
+
+/* Textbook icon styling */
+.textbook-icon {
+  position: absolute;
+  margin-left: 10px; /* Adjust as necessary */
+  margin-top: 4px; /* Adjust this to align vertically as needed */
+  font-size: 21px; /* Adjust size as needed */
+}
+
+/* Adjust the padding on the todo-input to make room for the icon */
+.todo-input {
+  padding-left: 40px; /* Increase left padding to make room for the icon */
+  /* Other styles... */
+}
+
+/* Other styles... */
+
+
+.add-btn {
+  padding: 10px;
+  background-color: #5cb85c;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-controls {
+  display: flex;
+  justify-content: space-between; /* Align inline */
+  margin-bottom: 10px; /* Space between controls and the list */
+}
+
+.complete-all-btn, .clear-completed-btn {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-basis: 48%; /* Make each button take up less than half the container width */
+}
+
+.todo-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.todo-list li {
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  position: relative; /* Needed for absolute positioning of destroy button */
+}
+
+.todo-list li .destroy {
+  display: none; /* Hidden by default */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Only show destroy button when hovering over the task */
+.todo-list li:hover .destroy {
+  display: block; /* Shown on hover */
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  text-decoration: underline;
+}
+
+/* Responsive and additional specific adjustments */
+@media (max-width: 600px) {
+  .todo-container {
+      width: auto;
+      margin: 10px;
+  }
+}

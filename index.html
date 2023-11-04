@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <div class="todo-input-container">
+            <span class="textbook-icon">📖</span>
+            <input type="text" id="new-task" placeholder="Type your todo list" class="todo-input">
+            <button id="add-task" class="add-btn">+</button>
+        </div>
+        
+        <div class="todo-controls">
+            <button id="complete-all" class="complete-all-btn">Complete all tasks</button>
+            <button id="clear-completed" class="clear-completed-btn">Clear completed</button>
+        </div>
+        <ul id="todo-list" class="todo-list"></ul>
+        <div class="todo-footer">
+            <span id="todo-count">3 tasks left</span>
+            <div class="filters">
+                <button id="filter-all" class="filter-btn active">All</button>
+                <button id="filter-active" class="filter-btn">Uncomplete</button>
+                <button id="filter-completed" class="filter-btn">Completed</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
